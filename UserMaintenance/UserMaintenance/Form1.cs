@@ -23,6 +23,7 @@ namespace UserMaintenance
             lblLastName.Text = Resource1.FullName; // label1
 
             saveButton.Text = Resource1.SaveFile;
+            deleteButton.Text = Resource1.DeleteFile;
            
             btnAdd.Text = Resource1.Add; // button1
 
@@ -57,6 +58,11 @@ namespace UserMaintenance
                 }
 
             }
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            users.Remove((User)listUsers.SelectedItem);
         }
     }
 }
