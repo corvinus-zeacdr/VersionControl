@@ -120,6 +120,14 @@ namespace Gyak4_ZEACDR
                 Excel.Range completeTableRange = xlSheet.get_Range(GetCell(1, 1), GetCell(lastRowID, headers.Length));
                 completeTableRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
 
+                Excel.Range firstColumn = xlSheet.get_Range(GetCell(2, 1), GetCell(1 + values.GetLength(0), 1));
+                firstColumn.Font.Bold = true;
+                firstColumn.Interior.Color = Color.LightYellow;
+
+                Excel.Range lastColumn = xlSheet.get_Range(GetCell(2, values.GetLength(1)), GetCell(1 + values.GetLength(0), values.GetLength(1)));
+                lastColumn.Interior.Color = Color.Green;
+                lastColumn.NumberFormat = "###,###.00";
+
         }
 
         private string GetCell(int x, int y)
