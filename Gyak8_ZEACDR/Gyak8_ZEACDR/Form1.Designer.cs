@@ -82,7 +82,7 @@ namespace Gyak8_ZEACDR
             // lblNext
             // 
             this.lblNext.AutoSize = true;
-            this.lblNext.Location = new System.Drawing.Point(435, 98);
+            this.lblNext.Location = new System.Drawing.Point(32, 70);
             this.lblNext.Name = "lblNext";
             this.lblNext.Size = new System.Drawing.Size(68, 13);
             this.lblNext.TabIndex = 2;
@@ -100,11 +100,12 @@ namespace Gyak8_ZEACDR
             // 
             // btnColor
             // 
+            this.btnColor.BackColor = System.Drawing.Color.Yellow;
             this.btnColor.Location = new System.Drawing.Point(115, 163);
             this.btnColor.Name = "btnColor";
-            this.btnColor.Size = new System.Drawing.Size(87, 59);
+            this.btnColor.Size = new System.Drawing.Size(87, 18);
             this.btnColor.TabIndex = 4;
-            this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.UseVisualStyleBackColor = false;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnSelectPresent
@@ -119,20 +120,22 @@ namespace Gyak8_ZEACDR
             // 
             // btnBoxColor
             // 
+            this.btnBoxColor.BackColor = System.Drawing.Color.Blue;
             this.btnBoxColor.Location = new System.Drawing.Point(236, 163);
             this.btnBoxColor.Name = "btnBoxColor";
-            this.btnBoxColor.Size = new System.Drawing.Size(87, 59);
+            this.btnBoxColor.Size = new System.Drawing.Size(87, 18);
             this.btnBoxColor.TabIndex = 6;
-            this.btnBoxColor.UseVisualStyleBackColor = true;
+            this.btnBoxColor.UseVisualStyleBackColor = false;
             this.btnBoxColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnRibbonColor
             // 
+            this.btnRibbonColor.BackColor = System.Drawing.Color.Red;
             this.btnRibbonColor.Location = new System.Drawing.Point(329, 163);
             this.btnRibbonColor.Name = "btnRibbonColor";
-            this.btnRibbonColor.Size = new System.Drawing.Size(87, 59);
+            this.btnRibbonColor.Size = new System.Drawing.Size(87, 18);
             this.btnRibbonColor.TabIndex = 7;
-            this.btnRibbonColor.UseVisualStyleBackColor = true;
+            this.btnRibbonColor.UseVisualStyleBackColor = false;
             this.btnRibbonColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // Form1
