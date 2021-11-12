@@ -37,11 +37,17 @@ namespace Gyak8_ZEACDR
             this.lblNext = new System.Windows.Forms.Label();
             this.btnSelectBall = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
+            this.btnSelectPresent = new System.Windows.Forms.Button();
+            this.btnBoxColor = new System.Windows.Forms.Button();
+            this.btnRibbonColor = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.btnRibbonColor);
+            this.mainPanel.Controls.Add(this.btnBoxColor);
+            this.mainPanel.Controls.Add(this.btnSelectPresent);
             this.mainPanel.Controls.Add(this.btnColor);
             this.mainPanel.Controls.Add(this.btnSelectBall);
             this.mainPanel.Controls.Add(this.lblNext);
@@ -65,7 +71,7 @@ namespace Gyak8_ZEACDR
             // 
             // btnSelectCar
             // 
-            this.btnSelectCar.Location = new System.Drawing.Point(13, 14);
+            this.btnSelectCar.Location = new System.Drawing.Point(13, 98);
             this.btnSelectCar.Name = "btnSelectCar";
             this.btnSelectCar.Size = new System.Drawing.Size(87, 59);
             this.btnSelectCar.TabIndex = 0;
@@ -76,7 +82,7 @@ namespace Gyak8_ZEACDR
             // lblNext
             // 
             this.lblNext.AutoSize = true;
-            this.lblNext.Location = new System.Drawing.Point(352, 14);
+            this.lblNext.Location = new System.Drawing.Point(435, 98);
             this.lblNext.Name = "lblNext";
             this.lblNext.Size = new System.Drawing.Size(68, 13);
             this.lblNext.TabIndex = 2;
@@ -84,7 +90,7 @@ namespace Gyak8_ZEACDR
             // 
             // btnSelectBall
             // 
-            this.btnSelectBall.Location = new System.Drawing.Point(115, 14);
+            this.btnSelectBall.Location = new System.Drawing.Point(115, 98);
             this.btnSelectBall.Name = "btnSelectBall";
             this.btnSelectBall.Size = new System.Drawing.Size(87, 59);
             this.btnSelectBall.TabIndex = 3;
@@ -94,12 +100,40 @@ namespace Gyak8_ZEACDR
             // 
             // btnColor
             // 
-            this.btnColor.Location = new System.Drawing.Point(218, 14);
+            this.btnColor.Location = new System.Drawing.Point(115, 163);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(87, 59);
             this.btnColor.TabIndex = 4;
             this.btnColor.UseVisualStyleBackColor = true;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
+            // 
+            // btnSelectPresent
+            // 
+            this.btnSelectPresent.Location = new System.Drawing.Point(236, 98);
+            this.btnSelectPresent.Name = "btnSelectPresent";
+            this.btnSelectPresent.Size = new System.Drawing.Size(87, 59);
+            this.btnSelectPresent.TabIndex = 5;
+            this.btnSelectPresent.Text = "PRESENT";
+            this.btnSelectPresent.UseVisualStyleBackColor = true;
+            this.btnSelectPresent.Click += new System.EventHandler(this.btnSelectPresent_Click);
+            // 
+            // btnBoxColor
+            // 
+            this.btnBoxColor.Location = new System.Drawing.Point(236, 163);
+            this.btnBoxColor.Name = "btnBoxColor";
+            this.btnBoxColor.Size = new System.Drawing.Size(87, 59);
+            this.btnBoxColor.TabIndex = 6;
+            this.btnBoxColor.UseVisualStyleBackColor = true;
+            this.btnBoxColor.Click += new System.EventHandler(this.btnColor_Click);
+            // 
+            // btnRibbonColor
+            // 
+            this.btnRibbonColor.Location = new System.Drawing.Point(329, 163);
+            this.btnRibbonColor.Name = "btnRibbonColor";
+            this.btnRibbonColor.Size = new System.Drawing.Size(87, 59);
+            this.btnRibbonColor.TabIndex = 7;
+            this.btnRibbonColor.UseVisualStyleBackColor = true;
+            this.btnRibbonColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // Form1
             // 
@@ -124,6 +158,9 @@ namespace Gyak8_ZEACDR
         private System.Windows.Forms.Label lblNext;
         private System.Windows.Forms.Button btnSelectCar;
         private System.Windows.Forms.Button btnColor;
+        private System.Windows.Forms.Button btnRibbonColor;
+        private System.Windows.Forms.Button btnBoxColor;
+        private System.Windows.Forms.Button btnSelectPresent;
     }
 }
 
