@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gyak8_ZEACDR.Entities
 {
-    class BallFactory
+    public class BallFactory
     {
         public Ball CreateNew()
         {

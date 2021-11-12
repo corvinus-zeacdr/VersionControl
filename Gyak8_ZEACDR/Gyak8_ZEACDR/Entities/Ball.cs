@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Gyak8_ZEACDR.Entities
 {
-    class Ball : Label
+    public class Ball : Label
     {
         public Ball()
         {
