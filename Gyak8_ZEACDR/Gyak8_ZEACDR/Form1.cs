@@ -1,4 +1,5 @@
-﻿using Gyak8_ZEACDR.Entities;
+﻿using Gyak8_ZEACDR.Abstractions;
+using Gyak8_ZEACDR.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,10 @@ namespace Gyak8_ZEACDR
 {
     public partial class Form1 : Form
     {
-        private List<Ball> _balls = new List<Ball>();
+        private List<Toy> _toys = new List<Toy>();
 
-        private BallFactory _factory;
-        public BallFactory Factory
+        private IToyFactory _factory;
+        public IToyFactory Factory
         {
             get { return _factory; }
             set { _factory = value; }
@@ -25,13 +26,13 @@ namespace Gyak8_ZEACDR
         public Form1()
         {
             InitializeComponent();
-            Factory = new BallFactory();
+            Factory = new CarFactory();
         }
 
         private void createTimer_Tick(object sender, EventArgs e)
         {
             var toy = Factory.CreateNew();
-            _balls.Add(toy);
+            _toys.Add(toy);
             toy.Left = -toy.Width;
             mainPanel.Controls.Add(toy);
 
@@ -40,7 +41,7 @@ namespace Gyak8_ZEACDR
         private void conveyorTimer_Tick(object sender, EventArgs e)
         {
             var maxPosition = 0;
-            foreach (var toy in _balls)
+            foreach (var toy in _toys)
             {
                 toy.MoveToy();
                 if (toy.Left > maxPosition)
@@ -49,9 +50,9 @@ namespace Gyak8_ZEACDR
 
             if (maxPosition > 1000)
             {
-                var oldestToy = _balls[0];
+                var oldestToy = _toys[0];
                 mainPanel.Controls.Remove(oldestToy);
-                _balls.Remove(oldestToy);
+                _toys.Remove(oldestToy);
             }
         }
     }
