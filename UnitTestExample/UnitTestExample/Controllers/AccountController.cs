@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using UnitTestExample.Abstractions;
 using UnitTestExample.Entities;
 using UnitTestExample.Services;
+using System.Collections.Generic;
 
 namespace UnitTestExample.Controllers
 {
@@ -22,16 +23,18 @@ namespace UnitTestExample.Controllers
 
         public Account Register(string email, string password)
         {
+            Guid id = Guid.NewGuid();
             if(!ValidateEmail(email))
                 throw new ValidationException(
                     "A megadott e-mail cím nem megfelelő!");
-            if(!ValidateEmail(email))
+            if(!ValidatePassword(password))
                 throw new ValidationException(
                     "A megadottt jelszó nem megfelelő!\n" +
                     "A jelszó legalább 8 karakter hosszú kell legyen, csak az angol ABC betűiből és számokból állhat, és tartalmaznia kell legalább egy kisbetűt, egy nagybetűt és egy számot.");
 
             var account = new Account()
-            {
+            { 
+                ID = id,
                 Email = email,
                 Password = password
             };
