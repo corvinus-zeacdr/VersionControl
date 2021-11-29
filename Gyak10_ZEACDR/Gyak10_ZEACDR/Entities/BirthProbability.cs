@@ -9,8 +9,8 @@ namespace Gyak10_ZEACDR.Entities
     public class BirthProbability
     {
         public int Age { get; set; }
-        public int NumberOfChildren { get; set; }
-        public double BProbability { get; set; }
+        public int NbrOfChildren { get; set; }
+        public double P { get; set; }
 
     }
 }
