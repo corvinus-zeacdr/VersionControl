@@ -165,7 +165,15 @@ namespace Gyak10_ZEACDR
 
         private void button1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog opd = new OpenFileDialog();
+            opd.Title = "Open CSV File";
+            opd.Filter = "CSV files (*.csv)|*.csv|XML files (*.xml)|*.xml";
+            opd.InitialDirectory = @"C:\Temp\";
 
+            if (opd.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = opd.FileName.ToString();
+            }
         }
     }
 }
