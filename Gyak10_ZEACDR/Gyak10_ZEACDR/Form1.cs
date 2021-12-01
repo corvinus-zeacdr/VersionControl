@@ -18,13 +18,17 @@ namespace Gyak10_ZEACDR
         List<BirthProbability> BirthProbabilities = new List<BirthProbability>();
         List<DeathProbability> DeathProbabilities = new List<DeathProbability>();
 
+        List<int> NumberOfMen = new List<int>();
+        List<int> NumberOfWomen = new List<int>();
+
+
         Random rng = new Random(1234);
 
         public Form1()
         {
             InitializeComponent();
 
-            Population = GetPopulation(@"C:\Temp\nép.csv");
+            Population = GetPopulation(textBox1.Text.ToString());
             BirthProbabilities = GetBirthProbabilities(@"C:\Temp\születés.csv");
             DeathProbabilities = GetDeathProbabilities(@"C:\Temp\halál.csv");
 
@@ -136,6 +140,10 @@ namespace Gyak10_ZEACDR
 
         private void Simulation()
         {
+            NumberOfMen.Clear();
+            NumberOfWomen.Clear();
+            richTextBox1.Clear();
+
             // Végigmegyünk a vizsgált éveken
             for (int year = 2005; year <= numericUpDown1.Value; year++)
             {
@@ -150,12 +158,30 @@ namespace Gyak10_ZEACDR
                 int nbrOfMales = (from x in Population
                                   where x.Gender == Gender.Male && x.IsAlive
                                   select x).Count();
+
+                NumberOfMen.Add(nbrOfMales);
+
+
                 int nbrOfFemales = (from x in Population
                                     where x.Gender == Gender.Female && x.IsAlive
                                     select x).Count();
-                Console.WriteLine(
-                    string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
+
+                NumberOfWomen.Add(nbrOfFemales);
+
+
+
+                //richTextBox1.Text += "Szimulációs év:" + year + "\n" +
+                //                    "\t Fiúk:" + nbrOfMales + "\n" +
+                //                    "\t Lányok:" + nbrOfFemales +"\n";
+
+
+
+
+                Console.WriteLine(string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
+
             }
+
+            DisplayResults();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -175,5 +201,16 @@ namespace Gyak10_ZEACDR
                 textBox1.Text = opd.FileName.ToString();
             }
         }
+
+        private void DisplayResults()
+        {
+            for (int year = 2005; year <= numericUpDown1.Value; year++)
+            {
+                richTextBox1.Text += "Szimulációs év:" + year + "\n" +
+                    "\t Fiúk:" + NumberOfMen[year-2005] + "\n" +
+                    "\t Lányok:" + NumberOfWomen[year-2005] +"\n";
+            }
+        }
+
     }
 }
