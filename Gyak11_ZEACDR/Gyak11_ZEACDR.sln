@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyak11_ZEACDR", "Gyak11_ZEACDR\Gyak11_ZEACDR.csproj", "{A5481625-5F68-4DF4-A19D-F9D12C1295CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5481625-5F68-4DF4-A19D-F9D12C1295CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5481625-5F68-4DF4-A19D-F9D12C1295CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5481625-5F68-4DF4-A19D-F9D12C1295CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5481625-5F68-4DF4-A19D-F9D12C1295CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14883E58-BE1D-4B8D-8973-5502DEB9B64B}
+	EndGlobalSection
+EndGlobal
