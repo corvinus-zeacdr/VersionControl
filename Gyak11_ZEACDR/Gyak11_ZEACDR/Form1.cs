@@ -64,6 +64,7 @@ namespace Gyak11_ZEACDR
             {
                 winnerBrain = winners.FirstOrDefault().Brain.Clone();
                 gc.GameOver -= Gc_GameOver;
+                button1.Visible = true;
                 return;
             }
 
@@ -87,6 +88,7 @@ namespace Gyak11_ZEACDR
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             gc.ResetCurrentLevel();
             gc.AddPlayer(winnerBrain.Clone());
             gc.AddPlayer();
